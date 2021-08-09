@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['Email'])) {
 
-    $email_to = "omarshelbayeh@gmail.com";
+    $email_to = "jacob@teamfeedback.co";
     $email_subject = "New form submissions";
 
     function problem($error)
@@ -61,7 +61,7 @@ if (isset($_POST['Email'])) {
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_subject, $email_message, $headers);
+    mail($email_to, $email_subject, $email_message, $headers);
 ?>
 
     Thank you for contacting us. We will be in touch with you very soon.
